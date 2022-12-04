@@ -7,6 +7,21 @@ import UIKit
  */
 
 func findMedianSortedArrays(_ nums1: [Int], _ nums2: [Int]) -> Double {
+    var median: Double = 0.0
     
-    return 0
+    var mergedArray = nums1 + nums2
+    mergedArray = mergedArray.sorted()
+    
+    if mergedArray.count % 2 == 0 {
+        var medianIndex: Int = mergedArray.count / 2
+        median = (Double(mergedArray[medianIndex]) + Double(mergedArray[medianIndex - 1])) / 2
+    } else {
+        var medianIndex: Double = floor(Double(mergedArray.count) / 2)
+        median = Double(mergedArray[Int(medianIndex)])
+    }
+    
+    return median
 }
+
+print(findMedianSortedArrays([1,3], [2]))
+print(findMedianSortedArrays([1,2], [3,4]))
