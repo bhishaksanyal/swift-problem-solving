@@ -25,3 +25,4 @@ func findMedianSortedArrays(_ nums1: [Int], _ nums2: [Int]) -> Double {
 
 print(findMedianSortedArrays([1,3], [2]))
 print(findMedianSortedArrays([1,2], [3,4]))
+print(findMedianSortedArrays([1], [1]))
